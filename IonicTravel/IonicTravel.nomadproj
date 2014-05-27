@@ -5,11 +5,13 @@
     <SchemaVersion>2.0</SchemaVersion>
     <CompiledOutputPath>distrib\</CompiledOutputPath>
     <OutputPath>bin\$(Configuration)</OutputPath>
-    <CordovaVersion>3.0</CordovaVersion>
+    <CordovaVersion>3.3</CordovaVersion>
     <BuildCloudVersion>2.0</BuildCloudVersion>
     <Name>IonicTravel</Name>
     <RootNamespace>IonicTravel</RootNamespace>
     <ProjectGuid>{b5aa97ca-1f50-4e91-9bb6-e9d49aea1a55}</ProjectGuid>
+    <BundleID>com.example.ionictravel</BundleID>
+    <Description />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
