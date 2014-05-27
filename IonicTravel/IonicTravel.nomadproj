@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <CompiledOutputPath>distrib\</CompiledOutputPath>
+    <OutputPath>bin\$(Configuration)</OutputPath>
+    <CordovaVersion>3.0</CordovaVersion>
+    <BuildCloudVersion>2.0</BuildCloudVersion>
+    <Name>IonicTravel</Name>
+    <RootNamespace>IonicTravel</RootNamespace>
+    <ProjectGuid>{b5aa97ca-1f50-4e91-9bb6-e9d49aea1a55}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="config.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="fonts\ionicons.eot">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="fonts\ionicons.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="fonts\ionicons.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="fonts\ionicons.woff">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="index.html" />
+    <Content Include="cordova.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\app.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\controllers.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\ngStorage.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\services.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\css\ionic.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\css\ionic.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\fonts\ionicons.eot">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\fonts\ionicons.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\fonts\ionicons.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\fonts\ionicons.woff">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\js\angular-ui\angular-ui-router.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\js\angular-ui\angular-ui-router.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\js\angular\angular-animate.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\js\angular\angular-animate.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\js\angular\angular-resource.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\js\angular\angular-resource.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\js\angular\angular-sanitize.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\js\angular\angular-sanitize.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\js\angular\angular.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\js\angular\angular.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\js\ionic-angular.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\js\ionic-angular.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\js\ionic.bundle.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\js\ionic.bundle.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\js\ionic.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\js\ionic.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\ionic.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\ionicons\ionicons.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\ionicons\_ionicons-animation.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\ionicons\_ionicons-font.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\ionicons\_ionicons-icons.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\ionicons\_ionicons-variables.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_action-sheet.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_animations.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_backdrop.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_badge.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_bar.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_button-bar.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_button.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_checkbox.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_form.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_grid.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_items.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_list.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_loading.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_menu.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_mixins.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_modal.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_platform.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_popup.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_progress.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_radio.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_range.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_reset.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_scaffolding.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_select.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_slide-box.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_split-pane.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_tabs.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_toggle.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_type.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_util.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\ionic\scss\_variables.scss">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="style\ionic.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="style\ionic.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="templates\client-detail.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="templates\ModalDialog.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="templates\new-edit-dialog.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="templates\tab-about.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="templates\tab-dash.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="templates\tab-settings.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="templates\tab-clients.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="templates\tab-travels.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="templates\tabs.html">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="fonts" />
+    <Folder Include="js" />
+    <Folder Include="lib" />
+    <Folder Include="lib\ionic" />
+    <Folder Include="lib\ionic\css" />
+    <Folder Include="lib\ionic\fonts" />
+    <Folder Include="lib\ionic\js" />
+    <Folder Include="lib\ionic\js\angular" />
+    <Folder Include="lib\ionic\js\angular-ui" />
+    <Folder Include="lib\ionic\scss" />
+    <Folder Include="lib\ionic\scss\ionicons" />
+    <Folder Include="templates" />
+    <Folder Include="style" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Target Name="ResolveReferences" />
+  <Target Name="CoreCompile" />
+  <Target Name="CreateManifestResourceNames" />
+  <Target Name="CopyFilesToOutputDirectory">
+    <ItemGroup>
+      <AbsoluteContentDestinations Include="$(OutputPath)%(Content.Identity)" />
+    </ItemGroup>
+    <Copy SourceFiles="@(Content)" DestinationFiles="@(AbsoluteContentDestinations)" />
+  </Target>
+</Project>

@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4B160523-D178-4405-B438-79FB67C8D499}") = "IonicTravel", "IonicTravel\IonicTravel.nomadproj", "{B5AA97CA-1F50-4E91-9BB6-E9D49AEA1A55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5AA97CA-1F50-4E91-9BB6-E9D49AEA1A55}.Debug|x86.ActiveCfg = Debug|x86
+		{B5AA97CA-1F50-4E91-9BB6-E9D49AEA1A55}.Debug|x86.Build.0 = Debug|x86
+		{B5AA97CA-1F50-4E91-9BB6-E9D49AEA1A55}.Release|x86.ActiveCfg = Release|x86
+		{B5AA97CA-1F50-4E91-9BB6-E9D49AEA1A55}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
