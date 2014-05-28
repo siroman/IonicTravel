@@ -237,9 +237,6 @@
     <Content Include="templates\client-detail.html">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="templates\ModalDialog.html">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="templates\new-edit-dialog.html">
       <SubType>Content</SubType>
     </Content>

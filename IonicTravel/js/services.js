@@ -9,7 +9,7 @@ angular.module('starter.services', [])
 	//localStorage.setItem('clients', []);
 	//localStorage.clear();
 
-	var clients = [{ id: 1, name: 'pinco pallino', travels: [] }];
+	var clients = [];
 	var clientsStore = localStorage.getItem('clients');
 	if (clientsStore != null && clientsStore != '' && angular.isArray(angular.fromJson(clientsStore))) {
 		clients = angular.fromJson(clientsStore);
@@ -24,7 +24,7 @@ angular.module('starter.services', [])
 			if (clients != null) {
 				return clients;
 			} else {
-				return [{ id: 1, name: 'pinco pallino' }];
+				return [];
 			}
 		},
 		getClient: function (clientId) {

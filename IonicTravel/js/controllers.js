@@ -96,9 +96,9 @@ function (Clients, $state, $scope, $ionicModal) {
 		return (form.description === undefined || form.description.$modelValue === undefined || form.description.$modelValue.length <= 0);
 	}
 
-	$scope.loadFromContacts = function (form) {
+	$scope.loadFromContacts = function () {
 		window.plugins.ContactPicker.chooseContact(function (contactInfo) {
-			form.description.$modelValue = contactInfo.displayName;
+			$scope.form.description.$setViewValue(contactInfo.displayName);
 		});
 	};
 
