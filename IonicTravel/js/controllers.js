@@ -97,6 +97,7 @@ function (Clients, $state, $scope, $ionicModal) {
 	$scope.loadFromContacts = function () {
 		// badrit
 		window.plugins.ContactPicker.chooseContact(function (contactInfo) {
+			console.log(contactInfo.displayName);
 			$scope.form.description.$setViewValue(contactInfo.displayName);
 		});
 
