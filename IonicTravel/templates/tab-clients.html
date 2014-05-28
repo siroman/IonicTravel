@@ -14,7 +14,7 @@
 		<ion-list show-delete="data.showDelete">
 
 			<ion-item ng-repeat="client in clients" item="client" ng-click="data.showDelete ? showEditItem(client) : showDetails(client.id)">
-				{{ client.name }} ({{client.id}})
+				{{ client.name }}
 				<ion-delete-button class="ion-minus-circled" ng-click="removeItem(client)"></ion-delete-button>
 				<ion-option-button class="button-calm" ng-click="showEditItem(client)">Edit</ion-option-button>
 				<ion-option-button class="button-assertive" ng-click="removeItem(client)">Delete</ion-option-button>

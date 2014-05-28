@@ -1,7 +1,5 @@
 angular.module('starter.controllers', [])
 
-//.controller('ClientsCtrl', function($scope) {
-//})
 .controller('TravelsCtrl', ['$scope',
 	function ($scope) {
 }])
@@ -48,7 +46,7 @@ function (Clients, $state, $scope, $ionicModal) {
 		var newItem = {};
 		// Add values from form to object
 		newItem.name = form.description.$modelValue;
-		newItem.id = Math.floor((Math.random() * 1000) + 1);
+		newItem.id = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) { var r = Math.random() * 16 | 0, v = c == 'x' ? r : r & 0x3 | 0x8; return v.toString(16); });;
 		newItem.travels = [];
 		// Save new list in scope and factory
 		$scope.clients.push(newItem);
