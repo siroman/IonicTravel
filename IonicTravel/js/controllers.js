@@ -97,11 +97,22 @@ function (Clients, $state, $scope, $ionicModal) {
 	}
 
 	$scope.loadFromContacts = function () {
-		window.plugins.ContactPicker.chooseContact(function (contactInfo) {
+		// Show Contact Picker
+		var successCallback = function (result) {
 			setTimeout(function () {
-				$scope.form.description.$setViewValue(contactInfo.displayName);
+				alert(result.name + " " + result.phoneNumber);
+				$scope.form.description.$setViewValue(result.name);
 			}, 0);
-		});
+		};
+		var failedCallback = function (result) {
+			setTimeout(function () { alert(result); }, 0);
+		}
+		window.plugins.contactNumberPicker.pick(successCallback, failedCallback);
+		//window.plugins.ContactPicker.chooseContact(function (contactInfo) {
+		//	setTimeout(function () {
+		//		$scope.form.description.$setViewValue(contactInfo.displayName);
+		//	}, 0);
+		//});
 	};
 
 }
