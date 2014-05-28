@@ -35,6 +35,27 @@
     <Content Include="fonts\ionicons.woff">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="icons\ios\Default%402x~iphone.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="icons\ios\Default-568h%402x~iphone.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="icons\ios\Default~iphone.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="icons\ios\icon%402x.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="icons\ios\icon-72%402x.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="icons\ios\icon-72.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="icons\ios\icon.png">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="index.html" />
     <Content Include="cordova.js">
       <SubType>Content</SubType>
@@ -261,6 +282,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="fonts" />
+    <Folder Include="icons\" />
+    <Folder Include="icons\ios\" />
     <Folder Include="js" />
     <Folder Include="lib" />
     <Folder Include="lib\ionic" />

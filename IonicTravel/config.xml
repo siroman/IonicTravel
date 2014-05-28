@@ -3,6 +3,13 @@
   <name>IonicTravel</name>
   <description>
   </description>
+  <icon src="/icons/ios/icon.png" width="57" height="57" gap:platform="ios" />
+  <icon src="/icons/ios/icon@2x.png" width="114" height="114" gap:platform="ios" />
+  <icon src="/icons/ios/icon-72.png" width="72" height="72" gap:platform="ios" />
+  <icon src="/icons/ios/icon-72@2x.png" width="144" height="144" gap:platform="ios" />
+  <splash src="/icons/ios/Default@2x~iphone.png" width="640" height="960" gap:platform="ios" />
+  <splash src="/icons/ios/Default~iphone.png" width="320" height="480" gap:platform="ios" />
+  <splash src="/icons/ios/Default-568h@2x~iphone.png" width="640" height="1136" gap:platform="ios" />
   <author email="sim.romano@gmail.com">sim.romano@gmail.com</author>
   <access origin="*" />
   <preference name="phonegap-version" value="3.4.0" />
@@ -25,5 +32,5 @@
   <gap:plugin name="org.apache.cordova.splashscreen" />
   <gap:plugin name="org.apache.cordova.vibration" />
   <gap:plugin name="org.apache.cordova.statusbar" />
-	<gap:plugin name="com.kolwit.pickcontact" version="1.0.1" />
+  <gap:plugin name="com.badrit.contactpicker" />
 </widget>
