@@ -94,19 +94,12 @@ function (Clients, $state, $scope, $ionicModal) {
 		return (form.description === undefined || form.description.$modelValue === undefined || form.description.$modelValue.length <= 0);
 	}
 
-	$scope.loadFromContacts = function () {
-		// badrit
+	$scope.loadFromContacts = function (form) {
 		window.plugins.ContactPicker.chooseContact(function (contactInfo) {
 			console.log(contactInfo.displayName);
-			$scope.form.description.$setViewValue(contactInfo.displayName);
+			console.log(form.description.$modelValue);
+			form.description.$setViewValue(contactInfo.displayName);
 		});
-
-		//window.plugins.PickContact.chooseContact(function (contactInfo) {
-		//	setTimeout(function () { // use timeout to fix iOS alert problem
-		//		alert(contactInfo.displayName + " " + contactInfo.emailAddress + " " + contactInfo.phoneNr);
-		//		$scope.form.description.$setViewValue(contactInfo.displayName);
-		//	}, 0);
-		//});
 	};
 
 }
