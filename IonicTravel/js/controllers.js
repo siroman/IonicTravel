@@ -97,11 +97,11 @@ function (Clients, $state, $scope, $ionicModal) {
 	}
 
 	$scope.loadFromContacts = function () {
-		navigator.contacts.pickContact(function (contact) {
-			console.log('The following contact has been selected:' + JSON.stringify(contact));
-			$scope.form.description.$setViewValue(contactInfo.name);
-		}, function (err) {
-			console.log('Error: ' + err);
+		window.plugins.PickContact.chooseContact(function (contactInfo) {
+			setTimeout(function () { // use timeout to fix iOS alert problem
+				alert(contactInfo.displayName + " " + contactInfo.emailAddress + " " + contactInfo.phoneNr);
+				$scope.form.description.$setViewValue(contactInfo.displayName);
+			}, 0);
 		});
 	};
 
