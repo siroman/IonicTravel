@@ -37,4 +37,35 @@ angular.module('starter.services', [])
 	};
 	return clientsSrv;
 
+})
+
+.factory('Tracks', function () {
+	var tracks = {};
+	var tracksSrv = {
+		getTracks: function (clientId) {
+			
+		},
+		addTrack: function (clientId, track) {
+
+		},
+		getAll: function () {
+
+		},
+		pushCoord: function (trackId, coord) {
+			travels.trackId.coords.push(coord);
+			localstorage.setItem('track_' + trackId, angular.toJson(travels.trackId));
+		}
+
+	}
+
+	return travelsSrv;
+
 });
+
+//Travel structure
+	//{
+	//	id: guid,
+	//	clientId: guid,
+	//	startTime: datatime,
+	//	coords: []
+	//}

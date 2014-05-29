@@ -94,11 +94,11 @@ function (Clients, $state, $scope, $ionicModal) {
 		return (form.description === undefined || form.description.$modelValue === undefined || form.description.$modelValue.length <= 0);
 	}
 
-	$scope.loadFromContacts = function (form) {
+	$scope.loadFromContacts = function () {
 		window.plugins.ContactPicker.chooseContact(function (contactInfo) {
 			console.log(contactInfo.displayName);
-			console.log(form.description.$modelValue);
-			form.description.$setViewValue(contactInfo.displayName);
+			document.getElementById('inputClientName').value(contactInfo.displayName);
+			$scope.form.description.$setViewValue(contactInfo.displayName);
 		});
 	};
 
@@ -107,6 +107,7 @@ function (Clients, $state, $scope, $ionicModal) {
 
 .controller('ClientDetailCtrl', function($scope, $stateParams, Clients) {
 	$scope.client = Clients.getClient($stateParams.clientId);
+	$scope.travels = Travels.getTravels($stateParams.clientId);
 })
 
 .controller('AboutCtrl', function($scope) {

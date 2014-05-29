@@ -7,7 +7,7 @@
 			<ion-list>
 				<li class="item item-input item-stacked-label">
 					<span class="input-label">Name</span>
-					<input type="text" placeholder="" name="description" ng-model="description" required />
+					<input id="inputClientName" type="text" placeholder="Client name" name="description" ng-model="description" required />
 				</li>
 				<ion-button ng-show="action == 'add'" class="button button-block button-energized icon-left ion-card" ng-click="loadFromContacts(form)">Load contact</ion-button>
 				<ion-button ng-show="action == 'add'" ng-init="saveEmpty(form)" class="button button-block button-positive" ng-disabled="formNotValid(form)" ng-click="addItem(form)">
