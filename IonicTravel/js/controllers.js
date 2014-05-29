@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ngStorage'])
 
 .controller('TravelsCtrl', ['$scope',
 	function ($scope) {
@@ -96,7 +96,6 @@ function (Clients, $state, $scope, $ionicModal) {
 
 	$scope.loadFromContacts = function () {
 		window.plugins.ContactPicker.chooseContact(function (contactInfo) {
-			console.log(contactInfo.displayName);
 			$scope.description = contactInfo.displayName;
 		});
 	};
@@ -104,10 +103,51 @@ function (Clients, $state, $scope, $ionicModal) {
 }
 ])
 
-.controller('ClientDetailCtrl', function($scope, $stateParams, Clients) {
+.controller('ClientDetailCtrl',  function ($scope, $stateParams, Clients, $ionicModal) {
+	var args = Array.prototype.slice.call(arguments);
+	args.forEach(function (el, index, arr) { console.log(el); });
 	$scope.client = Clients.getClient($stateParams.clientId);
-	$scope.travels = Travels.getTravels($stateParams.clientId);
+	$scope.tracking = false;
+
+	// Load the tracking dialog
+	$ionicModal.fromTemplateUrl('templates/trackingMap.html', function (modal) {
+		$scope.mapDialog = modal;
+	}, {
+		scope: $scope,
+		animation: 'slide-in-up'
+	});
+
+	$scope.showMapDialog = function () {
+		$scope.mapDialog.show();
+	};
+
+	$scope.closeMapDialog = function () {
+		// Remove dialog 
+		$scope.mapDialog.remove();
+		// Reload modal template to have cleared form
+		$ionicModal.fromTemplateUrl('templates/trackingMap.html', function (modal) {
+			$scope.mapDialog = modal;
+		}, {
+			scope: $scope,
+			animation: 'slide-in-up'
+		});
+	};
+
+
+	$scope.startTracking = function () {
+		$scope.tracking = true;
+	}
+
+	$scope.stopTracking = function () {
+		$scope.tracking = false;
+		$scope.closeMapDialog();
+	}
+	//$scope.travels = Travels.getTravels($stateParams.clientId);
 })
 
 .controller('AboutCtrl', function($scope) {
+})
+
+.controller('SettingsCtrl', function ($scope, $localStorage) {
+	$scope.settings = $localStorage.$default({units:'Km', useBadge:true});
 });

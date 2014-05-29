@@ -279,6 +279,9 @@
     <Content Include="templates\tabs.html">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="templates\trackingMap.html">
+      <SubType>Content</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="fonts" />

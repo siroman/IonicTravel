@@ -1,8 +1,23 @@
 angular.module('starter.services', [])
 
-/**
- * A simple example service that returns some data.
- */
+.factory('Settings', function () {
+	var settings = {};
+	var settingsStore = localStorage.getItem('settings');
+	if (settingsStore != null && settingsStore != '') {
+		settings = angular.fromJson(settingsStore);
+	}
+	return {
+		setItem: function (key, value) {
+			settings[key] = value;
+			localStorage.setItem('settings', settings);
+			return true;
+		},
+		getItem: function (key) {
+			return settings[key];
+		}
+	}
+})
+
 
 .factory('Clients', function() {
 	

@@ -1,19 +1,23 @@
 <ion-view title="Settings">
-  <ion-content class="has-header padding">
-    <h2>Settings</h2>
+	<ion-content class="has-header padding">
+		<ion-list>
+			<div class="item item-divider">Unit&agrave; di misura</div>
 
-		<div class="list list-inset">
-			<div class="item">Info personali</div>
-			<div class="item">Inizio settimana<span class="item-note">Luned&igrave;</span></div>
-			<div class="item">Unit&agrave; di misura<span class="item-note">Km</span></div>
-			<div class="item item-toggle">Utilizza badge
-			<label class="toggle toggle-calm">
-				<input type="checkbox" checked="checked" />
-				<div class="track">
-					<div class="handle"></div>
+			<label class="item item-radio">
+				<input type="radio" name="units" ng-model="settings.units" value="Km">
+				<div class="item-content">
+					Km
 				</div>
+				<i class="radio-icon ion-checkmark"></i>
 			</label>
-			</div>
-		</div>
-  </ion-content>
+			<label class="item item-radio">
+				<input type="radio" name="units" ng-model="settings.units" value="Miles">
+				<div class="item-content">
+					Miles
+				</div>
+				<i class="radio-icon ion-checkmark"></i>
+			</label>
+			<ion-toggle ng-model="settings.useBadge" toggle-class="toggle-calm">Utilizza icona badge</ion-toggle>
+		</ion-list>
+	</ion-content>
 </ion-view>
