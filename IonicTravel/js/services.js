@@ -1,24 +1,5 @@
 angular.module('starter.services', [])
-
-.factory('Settings', function () {
-	var settings = {};
-	var settingsStore = localStorage.getItem('settings');
-	if (settingsStore != null && settingsStore != '') {
-		settings = angular.fromJson(settingsStore);
-	}
-	return {
-		setItem: function (key, value) {
-			settings[key] = value;
-			localStorage.setItem('settings', settings);
-			return true;
-		},
-		getItem: function (key) {
-			return settings[key];
-		}
-	}
-})
-
-
+	
 .factory('Clients', function() {
 	
 	//localStorage.setItem('clients', []);

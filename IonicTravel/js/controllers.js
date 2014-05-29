@@ -104,10 +104,38 @@ function (Clients, $state, $scope, $ionicModal) {
 ])
 
 .controller('ClientDetailCtrl',  function ($scope, $stateParams, Clients, $ionicModal) {
-	var args = Array.prototype.slice.call(arguments);
-	args.forEach(function (el, index, arr) { console.log(el); });
+
 	$scope.client = Clients.getClient($stateParams.clientId);
 	$scope.tracking = false;
+	$scope.track = {};
+
+		$scope.initMap = function initialize() {
+			map = new google.maps.Map(document.getElementById('trackingMap'), { zoom: 15 });
+			poly = new google.maps.Polyline({ strokeColor: '#FF0000', strokeOpacity: 1.0, strokeWeight: 2 });
+			poly.setMap(map);
+			// Try HTML5 geolocation
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(function (position) {
+					var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+					$scope.track.start = new Date();
+					$scope.track.path = [];
+					$scope.track.path.push(position);
+					var bounds = new google.maps.LatLngBounds();
+					map.setCenter(pos);
+					$scope.watching = navigator.geolocation.watchPosition(function (position) {
+						$scope.track.push(position);
+						var path = poly.getPath();
+						path.push(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
+						for (var i = 0; i < path.length; i++) {
+							bounds.extend(path[i]);
+						}
+						map.fitBounds(bounds);
+					}, function (error) { console.log(error); });
+				}, function () {
+					alert('Error: The Geolocation service failed.')
+				});
+			}
+		};
 
 	// Load the tracking dialog
 	$ionicModal.fromTemplateUrl('templates/trackingMap.html', function (modal) {
@@ -119,11 +147,17 @@ function (Clients, $state, $scope, $ionicModal) {
 
 	$scope.showMapDialog = function () {
 		$scope.mapDialog.show();
+		$scope.initMap();
 	};
 
 	$scope.closeMapDialog = function () {
+		if ($scope.watching != null) {
+			navigator.geolocation.clearWatch($scope.watching);
+			$scope.watching = null;
+		}
 		// Remove dialog 
 		$scope.mapDialog.remove();
+		console.log($scope.track);
 		// Reload modal template to have cleared form
 		$ionicModal.fromTemplateUrl('templates/trackingMap.html', function (modal) {
 			$scope.mapDialog = modal;
