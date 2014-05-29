@@ -97,7 +97,7 @@ function (Clients, $state, $scope, $ionicModal) {
 	$scope.loadFromContacts = function () {
 		window.plugins.ContactPicker.chooseContact(function (contactInfo) {
 			console.log(contactInfo.displayName);
-			document.getElementById('inputClientName').value(contactInfo.displayName);
+			document.getElementById('inputClientName').value = contactInfo.displayName;
 			$scope.form.description.$setViewValue(contactInfo.displayName);
 		});
 	};
