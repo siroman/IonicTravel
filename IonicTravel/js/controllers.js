@@ -94,10 +94,11 @@ function (Clients, $state, $scope, $ionicModal) {
 		return (form.description === undefined || form.description.$modelValue === undefined || form.description.$modelValue.length <= 0);
 	}
 
-	$scope.loadFromContacts = function () {
+	$scope.loadFromContacts = function (form) {
 		window.plugins.ContactPicker.chooseContact(function (contactInfo) {
-			document.getElementById('inputClientName').value = contactInfo.displayName;
-			$scope.description = contactInfo.displayName;
+			var inputField = document.getElementById('inputClientName');
+			inputField.value = contactInfo.displayName;
+			inputField.triggerHandler('input');
 		});
 	};
 

@@ -7,12 +7,12 @@
   <icon src="/icons/ios/icon@2x.png" width="114" height="114" gap:platform="ios" />
   <icon src="/icons/ios/icon-72.png" width="72" height="72" gap:platform="ios" />
   <icon src="/icons/ios/icon-72@2x.png" width="144" height="144" gap:platform="ios" />
-  <splash src="/icons/ios/Default@2x~iphone.png" width="640" height="960" gap:platform="ios" />
-  <splash src="/icons/ios/Default~iphone.png" width="320" height="480" gap:platform="ios" />
-  <splash src="/icons/ios/Default-568h@2x~iphone.png" width="640" height="1136" gap:platform="ios" />
+  <splash src="/screens/ios/Default@2x~iphone.png" width="640" height="960" gap:platform="ios" />
+  <splash src="/screens/ios/Default~iphone.png" width="320" height="480" gap:platform="ios" />
+  <splash src="/screens/ios/Default-568h@2x~iphone.png" width="640" height="1136" gap:platform="ios" />
   <author email="sim.romano@gmail.com">sim.romano@gmail.com</author>
   <access origin="*" />
-  <preference name="phonegap-version" value="3.4.0" />
+  <preference name="phonegap-version" value="3.3.0" />
   <gap:plugin name="org.apache.cordova.battery-status" />
   <gap:plugin name="org.apache.cordova.camera" />
   <gap:plugin name="org.apache.cordova.media-capture" />
