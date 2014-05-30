@@ -58,7 +58,7 @@ angular.module('starter.services', [])
 
 });
 
-//Travel structure
+//Track structure
 	//{
 	//	id: guid,
 	//	clientId: guid,

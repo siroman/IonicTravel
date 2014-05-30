@@ -98,7 +98,7 @@ function (Clients, $state, $scope, $ionicModal) {
 		window.plugins.ContactPicker.chooseContact(function (contactInfo) {
 			var inputField = document.getElementById('inputClientName');
 			inputField.value = contactInfo.displayName;
-			inputField.triggerHandler('input');
+			inputField.triggerHandler('change');
 		});
 	};
 
