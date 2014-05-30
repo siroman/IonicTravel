@@ -10,7 +10,7 @@
 					<input id="inputClientName" type="text" placeholder="Client name" name="description" ng-model="description" required />
 				</li>
 				<ion-button ng-show="action == 'add'" class="button button-block button-energized icon-left ion-card" ng-click="loadFromContacts(form)">Load contact</ion-button>
-				<ion-button ng-show="action == 'add'" ng-init="saveEmpty(form)" class="button button-block button-positive" ng-disabled="formNotValid(form)" ng-click="addItem(form)">
+				<ion-button ng-show="action == 'add'" ng-init="saveEmpty(form)" class="button button-block button-positive" ng-click="addItem(form)">
 					Add
 				</ion-button>
 				<ion-button ng-show="action == 'change'" class="button button-block button-positive" ng-click="editItem(form)" ng-disabled="formNotValid(form)">

@@ -125,7 +125,7 @@ function (Clients, $state, $scope, $ionicModal) {
 					var bounds = new google.maps.LatLngBounds();
 					map.setCenter(pos);
 					$scope.watching = navigator.geolocation.watchPosition(function (position) {
-						$scope.track.push(position);
+						$scope.track.path.push(position);
 						var path = poly.getPath();
 						path.push(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
 						for (var i = 0; i < path.length; i++) {
