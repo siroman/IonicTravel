@@ -96,9 +96,12 @@ function (Clients, $state, $scope, $ionicModal) {
 
 	$scope.loadFromContacts = function (form) {
 		window.plugins.ContactPicker.chooseContact(function (contactInfo) {
-			var inputField = document.getElementById('inputClientName');
-			inputField.value = contactInfo.displayName;
-			inputField.triggerHandler('change');
+			//var inputField = document.getElementById('inputClientName');
+			//inputField.value = contactInfo.displayName;
+			//inputField.triggerHandler('change');
+			console.log(contactInfo.displayName);
+			$scope.form.description.$setViewValue(contactInfo.displayName);
+			$scope.description = contactInfo.displayName;
 		});
 	};
 
@@ -113,7 +116,7 @@ function (Clients, $state, $scope, $ionicModal) {
 
 		$scope.initMap = function initialize() {
 			map = new google.maps.Map(document.getElementById('trackingMap'), { zoom: 15 });
-			poly = new google.maps.Polyline({ strokeColor: '#FF0000', strokeOpacity: 1.0, strokeWeight: 2 });
+			poly = new google.maps.Polyline({ strokeColor: '#0000FF', strokeOpacity: 1.0, strokeWeight: 3 });
 			poly.setMap(map);
 			// Try HTML5 geolocation
 			if (navigator.geolocation) {

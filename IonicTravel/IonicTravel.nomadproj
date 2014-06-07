@@ -35,6 +35,21 @@
     <Content Include="fonts\ionicons.woff">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="icons\ios\Default%402x~iphone.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="icons\ios\Default-568h%402x~iphone.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="icons\ios\Default-Landscape~ipad.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="icons\ios\Default-Portrait~ipad.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="icons\ios\Default~iphone.png">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="icons\ios\icon%402x.png">
       <SubType>Content</SubType>
     </Content>
@@ -240,15 +255,6 @@
     <Content Include="lib\ionic\scss\_variables.scss">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="screens\ios\Default%402x~iphone.png">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="screens\ios\Default-568h%402x~iphone.png">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="screens\ios\Default~iphone.png">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="style\ionic.css">
       <SubType>Content</SubType>
     </Content>
@@ -297,8 +303,6 @@
     <Folder Include="lib\ionic\js\angular-ui" />
     <Folder Include="lib\ionic\scss" />
     <Folder Include="lib\ionic\scss\ionicons" />
-    <Folder Include="screens" />
-    <Folder Include="screens\ios" />
     <Folder Include="templates" />
     <Folder Include="style" />
   </ItemGroup>
